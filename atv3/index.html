@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Formulário</h1>
+    <form id="formExtrato">
+      <div class="mb-3">
+        <label for="nomeCliente" class="form-label">Nome do cliente:</label>
+        <input type="text" class="form-control" id="nomeCliente" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Bebida:</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="bebida" id="suco" value="suco" required>
+          <label class="form-check-label" for="suco">Suco</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="bebida" id="refrigerante" value="refrigerante" required>
+          <label class="form-check-label" for="refrigerante">Refrigerante</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="bebida" id="agua" value="agua" required>
+          <label class="form-check-label" for="agua">Água</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Doces:</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="doces[]" id="bolo" value="bolo">
+          <label class="form-check-label" for="bolo">Bolo</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="doces[]" id="pastel" value="pastel">
+          <label class="form-check-label" for="pastel">Pastel</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="doces[]" id="torta" value="torta">
+          <label class="form-check-label" for="torta">Torta</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Calcular</button>
+      <button type="reset" class="btn btn-secondary">Apagar</button>
+    </form>
+    <div id="extrato" class="mt-3" style="display: none;">
+      <h3>Extrato:</h3>
+      <p id="cliente"></p>
+      <p id="bebida"></p>
+      <p id="doces"></p>
+      <p id="valorPagar"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
